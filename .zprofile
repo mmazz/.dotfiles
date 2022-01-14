@@ -1,0 +1,1 @@
+/home/mati/.config/shell/profile
