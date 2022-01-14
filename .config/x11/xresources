@@ -1,0 +1,80 @@
+*.alpha: 0.9
+
+
+*.foreground:  #3B4252
+! For some reason, this is the cusror color...
+*.background:    #11AED1
+! me cambia el background...
+! The one i like for the foregroudn  #4C566A
+! The same as onedark
+*.cursorColor:  #282c34
+
+*.highlightColor:#4E81AC
+
+*fading: 35
+*fadeColor: #5C6370
+
+
+! Negro y gris
+*.color0:        #2E3440
+*.color8:        #5C6370
+! Rojos
+*.color1:        #BF616A
+*.color9:        #E06C75
+! Verde
+*.color2:        #A3BE8C
+*.color10:       #98C379
+! Amarillo
+*.color3:        #D08770
+*.color11:       #EBCB8B
+! Azul
+*.color4:        #81A1C1
+*.color12:       #61AFEF
+! Magenta
+*.color5:        #B48EAD
+*.color13:       #C678DD
+! Cyan
+*.color6:        #56B6D9
+*.color14:       #88B9C9
+! Blanco
+*.color7:       #D8DEE9
+.color15:       #ECEFF4
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+!
+!*.foreground:   nord1
+!*.background:   nord3
+!*.cursorColor:  nord0
+!*fading: 35
+!*fadeColor: nord3
+!
+!*.color0: nord1
+!*.color1: nord11
+!*.color2: nord14
+!*.color3: nord13
+!*.color4: nord9
+!*.color5: nord15
+!*.color6: nord8
+!*.color7: nord5
+!*.color8: nord3
+!*.color9: nord11
+!*.color10: nord14
+!*.color11: nord13
+!*.color12: nord9
+!*.color13: nord15
+!*.color14: nord7
+!*.color15: nord6

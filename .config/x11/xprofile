@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+#[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+#pgrep redshift &> /dev/null || redshift &> /dev/null &
+#setbg &
+#xcompmgr &
+#pulseaudio --start &
+#setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl &
+#redshift &
+xrdb -merge ~/.config/x11/xresources &
+#xautolock -time 60 -locker "systemctl suspend" &
+#wmname LG3D
+#dwmblocks &
+#brave &
