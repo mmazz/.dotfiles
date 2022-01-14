@@ -1,0 +1,9 @@
+#!/bin/sh
+
+
+bgloc=$(shuf -ezn 1 ~/Pictures/wallpapers/* | xargs -0 -n1 echo)
+
+
+#bgloc=~/Pictures/wallpapers/wallpaper.jpg
+
+xwallpaper --zoom $bgloc

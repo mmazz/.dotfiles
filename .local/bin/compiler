@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# This script will compile or run another finishing operation on a document. I
+# have this script run via vim.
+#
+# Compiles .tex. groff (.mom, .ms), .rmd, .md.  Opens .sent files as sent
+# presentations.  Runs scripts based on extention or shebang
+#
+# Note that .tex files which you wish to compile with XeLaTeX should have the
+# string "xelatex" somewhere in a comment/command in the first 5 lines.
+
+# bash script, # hace que borre desde el principio lo que le pases, si uso ## fuerza aun mas,
+# name=${file#*/} asi borraria hasta el primer /, pero con  el doble borra hasta el ultimo /
+# % hace lo opuesto, arranca desde el final. "${file%.*}" aca busca desde el final todo (*) hasta el punto
+
+file=$(readlink -f "$1")
+dir=$(dirname "$file")
+base="${file%.*}"
+bases="${1%.*}"
+
+cd "$dir" || exit
+
+textype() { \
+	command="pdflatex"
+	$command --output-directory="$dir" "$base" &&
+    ( head -n15 "$file" | (grep -i natbib "$file" || grep -i biblatex "$file" || grep -i apacite "$file" > /dev/null)) &&
+	bibtex "$bases"
+	$command --output-directory="$dir" "$base" &&
+	$command --output-directory="$dir" "$base"
+	}
+
+
+case "$file" in
+	[0-9]) preconv "$file" | refer -PS -e | groff -mandoc -T pdf > "$base".pdf ;;
+	*\.c) cc "$file" -o "$base" && "$base" ;;
+    *\.cpp) g++ "$file" -o "$base" && "$base" ;;
+	*\.go) go run "$file" ;;
+	*\.h) sudo make install ;;
+	*\.m) octave "$file" ;;
+	*\.md)	if  [ -x "$(command -v lowdown)" ]; then
+			lowdown -d nointem -e super "$file" -Tms | groff -mpdfmark -ms -kept > "$base".pdf
+		elif [ -x "$(command -v groffdown)" ]; then
+			groffdown -i "$file" | groff > "$base.pdf"
+		else
+			pandoc "$file" --pdf-engine=xelatex -o "$base".pdf
+		fi ; ;;
+	*\.mom) preconv "$file" | refer -PS -e | groff -mom -kept -T pdf > "$base".pdf ;;
+	*\.ms) preconv "$file" | refer -PS -e | groff -me -ms -kept -T pdf > "$base".pdf ;;
+	*\.py) python "$file" ;;
+	*\.[rR]md) Rscript -e "rmarkdown::render('$file', quiet=TRUE)" ;;
+	*\.rs) cargo build ;;
+   *\.sass) sassc -a "$file" "$base.css" ;;
+	*\.scad) openscad -o "$base".stl "$file" ;;
+	*\.sent) setsid -f sent "$file" 2>/dev/null ;;
+	*\.tex) textype "$file" ;;
+	*) sed 1q "$file" | grep "^#!/" | sed "s/^#!//" | xargs -r -I % "$file" ;;
+esac
