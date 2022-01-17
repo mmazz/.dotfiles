@@ -1,4 +1,20 @@
 #!/usr/bin/sh
+#nmcli device wifi connect "wifi" password "password"
+#nmcli connection show
+# device wifi list
+
+showConnection() { printf "%s" "$(nmcli connection show | sed -n '2p' | awk -F "  "\
+    '{print "Name: " $1 "\n Type: " $3}')"; }
+
+CONNECTIONS=$(showConnection)
+
+case $BUTTON in
+    1) notify-send "Connections availables:" "$CONNECTIONS" ;;
+    2) notify-send "﬉ internet module" "\- Left click to show connetion status - Right click to show and change connection -
+        Connect to wifi with 'nmcli device wifi connect 'wifi' password 'password''" ;;
+    3) setsid  -f "$TERMINAL" -e nmcli device wifi list;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
 
 if grep -xq 'up' /sys/class/net/w*/operstate 2>/dev/null ; then
 	wifiicon="$(awk '/^\s*w/ { print "", int($3 * 100 / 70) "% " }' /proc/net/wireless)"

@@ -4,7 +4,7 @@ filetype plugin indent on
 syntax on
 " Default nvim-cmp
 set completeopt=menu,menuone,noselect
-
+set directory^=$HOME/.config/nvim/swap//
 set spelllang=en_us,es
 set autoindent
 ""set bg=dark
