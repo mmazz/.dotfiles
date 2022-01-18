@@ -1,6 +1,6 @@
 *.alpha: 0.9
 
-
+<BS>URxvt.background: black
 *.foreground:  #3B4252
 ! For some reason, this is the cusror color...
 *.background:    #11AED1

@@ -4,17 +4,18 @@
 
 case $BUTTON in
 	1) setsid -f "$TERMINAL" -e pulsemixer ;;
-	2) pamixer -t ;;
+	3) pamixer -t ;;
 	4) pamixer --allow-boost -i 5 ;;
 	5) pamixer --allow-boost -d 5 ;;
-	3) notify-send "Volume module" "\- Shows volume  , 婢 f muted.
-- Middle click to mute.
-- Scroll to change." ;;
+	2) notify-send "Volume module" "
+- Right click to mute.
+- Left click to open settings.
+- Scroll to change volume." ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
 if [ $(pamixer --get-mute) = true ]; then
-    echo  婢 && exit
+    echo " 婢 0%" && exit
 fi
 
 vol="$(pamixer --get-volume)"
@@ -26,7 +27,7 @@ elif [ "$vol" -gt "30" ]; then
 elif [ "$vol" -gt "0" ]; then
 	icon="  "
 else
-        echo  婢 && exit
+        echo " 婢0%" && exit
 fi
 
 echo "$icon $vol%"
