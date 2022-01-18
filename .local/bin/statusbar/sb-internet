@@ -12,7 +12,7 @@ case $BUTTON in
     1) notify-send "Connections availables:" "$CONNECTIONS" ;;
     2) notify-send "﬉ internet module" "\- Left click to show connetion status - Right click to show and change connection -
         Connect to wifi with 'nmcli device wifi connect 'wifi' password 'password''" ;;
-    3) setsid  -f "$TERMINAL" -e nmcli device wifi list;;
+    3) setsid  -f "$TERMINAL" -e nmcli device wifi list ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
