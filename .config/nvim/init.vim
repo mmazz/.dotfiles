@@ -63,6 +63,7 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
+
 augroup mati
     " Borra el autocmd que pudo haberse corrido previamente. Si no se acumulan
     autocmd!
@@ -75,6 +76,7 @@ augroup highlight_yank
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
 augroup END
 
+autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
 let g:vimtex_compiler_latexmk = {'build_dir' : 'build'}
 
 autocmd TermOpen * setlocal nonu

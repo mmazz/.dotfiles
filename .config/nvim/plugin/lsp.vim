@@ -4,8 +4,8 @@ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 "annoremap <leader>vd :lua vim.lsp.buf.definition()<CR>
 nnoremap <silent><leader>vd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
 nnoremap <leader>vi :lua vim.lsp.buf.implementation()<CR>
-"nnoremap <leader>vsh :lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent><leader>vsh <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
+nnoremap <leader>vsh :lua vim.lsp.buf.signature_help()<CR>
+"nnoremap <silent><leader>vsh <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
 nnoremap <leader>vrr :lua vim.lsp.buf.references()<CR>
 "nnoremap <leader>vrn :lua vim.lsp.buf.rename()<CR>
 nnoremap <silent><leader>vrn <cmd>lua require('lspsaga.rename').rename()<CR>

@@ -1,19 +1,19 @@
-*.alpha: 0.9
-
-<BS>URxvt.background: black
-*.foreground:  #3B4252
+*.alpha: 0.95
 ! For some reason, this is the cusror color...
-*.background:    #11AED1
+*.background:   #333333
+*.foreground:   #ECEFF4
+
 ! me cambia el background...
-! The one i like for the foregroudn  #4C566A
+! The one i like for the foreground  #4C566A
 ! The same as onedark
-*.cursorColor:  #282c34
+*.cursorColor:  #11AED1
 
 *.highlightColor:#4E81AC
 
 *fading: 35
 *fadeColor: #5C6370
 
+! One dark
 
 ! Negro y gris
 *.color0:        #2E3440
@@ -39,6 +39,8 @@
 ! Blanco
 *.color7:       #D8DEE9
 .color15:       #ECEFF4
+
+! Nord scheme
 #define nord0 #2E3440
 #define nord1 #3B4252
 #define nord2 #434C5E
@@ -58,7 +60,7 @@
 !
 !*.foreground:   nord1
 !*.background:   nord3
-!*.cursorColor:  nord0
+!*.cursorColor:  nord4
 !*fading: 35
 !*fadeColor: nord3
 !
