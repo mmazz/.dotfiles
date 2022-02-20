@@ -26,7 +26,7 @@ export BIB="$HOME/Documents/Doctorado/doc.bib"
 #programs
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
-export WGETRC="$XDG_CONFIG_HOME"/wgetrc
+export WGETRC="$XDG_CONFIG_HOME"/wget/wgetrc
 export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 
 export LF_ICONS="di=:\
