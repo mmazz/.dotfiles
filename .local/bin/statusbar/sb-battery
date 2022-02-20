@@ -3,11 +3,12 @@ case $BUTTON in
 	2) notify-send "🌈 Battery module" "\- No actions" ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
-DIR="/sys/class/power_supply/BAT?*"
+#DIR="/sys/class/power_supply/BAT?*"
+DIR="/sys/class/power_supply/BAT*"
 # Loop through all attached batteries and format the info
 if [ -d "$DIR" ]; then
-for battery in /sys/class/power_supply/BAT?*; do
-        # If non-first battery, print a space separator.
+for battery in $DIR; do # Does not work with ?*
+         # If non-first battery, print a space separator.
         [ -n "${capacity+x}" ] && printf " "
         # Sets up the status and capacity
         case "$(cat "$battery/status")" in
