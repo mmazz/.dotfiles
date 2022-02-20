@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/bin/sh
 function run {
  if ! pgrep $1 ;
   then
