@@ -1,6 +1,8 @@
 #!/bin/sh
 case $BUTTON in
+    1)notify-send "🌈 Battery module" "\- No actions" ;;
 	2) notify-send "🌈 Battery module" "\- No actions" ;;
+	3) notify-send "🌈 Battery module" "\- No actions" ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 #DIR="/sys/class/power_supply/BAT?*"

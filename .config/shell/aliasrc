@@ -32,3 +32,6 @@ alias \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"\
     wget="wget --hsts-file="$XDG_CACHE_HOME/wget-hsts""
+
+alias \
+	lf="lfub"
