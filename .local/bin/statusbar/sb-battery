@@ -6,7 +6,7 @@ case $BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 #DIR="/sys/class/power_supply/BAT?*"
-DIR="/sys/class/power_supply/BAT*"
+DIR="/sys/class/power_supply/BAT0"
 # Loop through all attached batteries and format the info
 if [ -d "$DIR" ]; then
 for battery in $DIR; do # Does not work with ?*
