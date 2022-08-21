@@ -1,8 +1,9 @@
 #!/bin/sh
 
 # Use neovim for vim if present.
-[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
-
+#[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+#alias vim="~/nvim.appimage" vimdiff="nvim -d"
+alias vim="nvim" vimdiff="nvim -d"
 # Use $XINITRC variable if file exists.
 [ -f "$XINITRC" ] && alias startx="startx $XINITRC"
 
@@ -11,6 +12,8 @@ for x in mount umount sv pacman updatedb su ; do
 	alias $x="sudo $x"
 done
 
+alias \
+    git l="git log --all --graph --decorate"
 
 # Verbosity and settings that you pretty much just always are going to want.
 alias \

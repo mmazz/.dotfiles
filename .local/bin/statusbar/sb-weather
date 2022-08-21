@@ -19,7 +19,7 @@ showWeather() { printf "%s" "$(sed '16q;d' "$weatherReport" |
 	grep -wo "[0-9]*%" | sort -rn | sed "s/^/☔/g;1q" | tr -d '\n')"
 sed '13q;d' "$weatherReport" | grep -o "m\\([-+]\\)*[0-9]\\+" | sed 's/+//g' | \
     sort -n -t 'm' -k 2n | sed -e 1b -e '$!d' | tr '\n|m' ' ' | awk \
-    '{print "  " $1 "°","" $2 "°"}' ;}
+    '{print "  " $1 "°"," " $2 "°"}' ;}
 
 
 
@@ -29,8 +29,8 @@ case $BUTTON in
 	2) notify-send "🌈 Weather module" "\- Left click for actual forecast.
 - Right click to update forecast.
 ☔: Chance of rain/snow
- :  Daily low
-�: Daily high" ;;
+ : Daily low
+ : Daily high" ;;
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 

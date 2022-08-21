@@ -8,6 +8,7 @@
 #setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl &
 #redshift &
 xrdb -merge ~/.config/x11/xresources &
+unclutter -idle 3 &
 #xautolock -time 60 -locker "systemctl suspend" &
 #wmname LG3D
 #dwmblocks &

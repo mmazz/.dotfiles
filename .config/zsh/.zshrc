@@ -20,6 +20,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 export LESS=-R
 export MYVIMRC=~/.config/nvim/init.lua
+export PATH="$PATH:$HOME/azuredatastudio-linux-x64"
+export PATH="$PATH:$HOME/Documents/Materias/Orga/Digital"
 
 
 # History in cache directory:

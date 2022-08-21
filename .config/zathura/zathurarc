@@ -2,4 +2,4 @@ set selection-clipboard clipboard
 set recolor true
 
 map <C-n> recolor
-map <C-f> /
+map <C-f> feedkeys "/"
