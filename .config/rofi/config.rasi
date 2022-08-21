@@ -1,0 +1,10 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "FiraCode Nerd Font 12";
+  modi: "window,run,drun";
+}
+
+@theme "theme.rasi"
+
