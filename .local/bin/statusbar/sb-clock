@@ -11,4 +11,4 @@ case $BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-date "+%a %d %b, %H:%M "
+date "+%a %d %b %H:%M"

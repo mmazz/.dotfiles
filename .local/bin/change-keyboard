@@ -1,0 +1,18 @@
+#!/bin/sh
+# works on any init system
+# requirements: dmenu, xorg-setxkbmap
+kb="$(setxkbmap -query | grep -oP 'layout:\s*\K\w+')" || exit 1
+#kb_choise=""
+changeLayout () {
+if [ $kb = "us" ] || [ $kb = "us -variant altgr-int" ]; then
+    kb_choise="es"
+else
+    kb_choise="us -variant altgr-intl"
+fi
+echo $kb_choise
+}
+
+kb="$(changeLayout)"
+setxkbmap -rules evdev -model evdev -layout $kb
+dwmblocks
+pkill -RTMIN+30 "${STATUSBAR:-dwmblocks}"

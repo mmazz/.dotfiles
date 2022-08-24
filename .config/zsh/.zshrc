@@ -1,7 +1,18 @@
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
-PS1="%B%{$fg[cyan]%}[%{%}%n%{%}@%{%}%M %{$fg[white]%}%~%{$fg[cyan]%}]%{%}$%b "
+#PS1="%B%{$fg[cyan]%}[%{%}%n%{%}@%{%}%M %{$fg[white]%}%~%{$fg[cyan]%}]%{%}$%b "
+#zstyle ':completion:*:*:git:*' script ~/usr/share/zsh/plugins/git-completion.bash
+#fpath=(~/usr/share/zsh/plugins $fpath)
+#autoload -Uz compinit && compinit
+PS1="%B%{$fg[cyan]%}[%{$fg[white]%}%n%{$fg[cyan]%}@%{$fg[white]%}%M %{$fg[white]%}%~%{$fg[cyan]%}]%{%}$%b "
 
+#PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[cyan]%}@%{$fg[white]%}%m%{$fg[blue]%}]%{$reset_color%}%
+#%(?:%{$fg_bold[cyan]%}➜ :%{$fg_bold[red]%}➜ )"
+#PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+#ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
+#ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+#ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
+#ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search

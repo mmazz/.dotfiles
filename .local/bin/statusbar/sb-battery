@@ -27,6 +27,6 @@ for battery in $DIR; do # Does not work with ?*
         printf "%s%s%d%%" "$status" "$warn" "$capacity"; unset warn
 done && exit 0
 else
-    echo " "
+    echo "  "
 fi
 
