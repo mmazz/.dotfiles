@@ -1,0 +1,74 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+\usepackage[a4paper,margin=3.5cm]{geometry} %Sets the page geometry
+\usepackage{url}
+\usepackage{dirtytalk}
+\usepackage{graphicx} % Package for \includegraphics
+\usepackage{wrapfig} % Figure wrapping
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\setlength{\parskip}{1em} % Set space when paragraphs are used
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\usepackage{mathtools}
+
+% Lets you use \blankpage to make a blank page
+\newcommand{\blankpage}{
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+}
+
+% Other
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor} %Floor function
+
+\begin{document}
+\section{DWM}
+\begin{itemize}
+  \item Mod+Shift+l $\to$ Change Keyboard layout
+  \item Mod+Shift+n $\to$ Recent notes
+  \item Mod+Shift+c $\to$ Calculator
+  \item Mod+Shift+h $\to$ Help Shortcuts
+  \item Mod+Shift+q $\to$ refresh dwm
+  \item Mod+n $\to$ notes
+  \item Mod+b $\to$ Toggle bar
+  \item Mod+s $\to$ Stick a windows for multiple tags
+  \item Mod+f $\to$ Fullscreen
+  \item Mod+PrtSc $\to$ Screenshot (saved)
+  \item Mod+Shift+PrtSc $\to$ Select Screenshot
+  \item Mod+Ctrl+Shift+q $\to$ Kill dwm
+\end{itemize}
+
+\section{ST}
+\begin{itemize}
+  \item Ctrl+Shift+Enter $\to$ Open new terminal with same pwd
+  \item Ctrl+Shift+=(PagUp) $\to$ Increase font size
+  \item Ctrl+Shift+-(PagDn) $\to$ Decrease font size
+  \item Ctrl+Shift+k $\to$ Scroll Up
+  \item Ctrl+Shift+j $\to$ Scroll Down
+\end{itemize}
+\section{Commands}
+\begin{itemize}
+  \item Duplicate monitor: \$xrandr --output <projector> --same-as <desktop>
+  \item Git log: \$git log --all --graph --decorate --oneline
+
+    \newpage
+\end{itemize}
+\section{Nvim}
+\begin{itemize}
+  \item Ctrl+k/j $\to$ Luasnip Expansion key
+  \item Ctrl+l  $\to$ Luasnip Choise nodes
+  \item Ctrl+u $\to$ Luasnip Select Choice
+  \item Space+Space+s $\to$ Luasnip Source
+  \item Ctrl+h/j/k/l $\to$ Window navegation
+  \item Cntrl+Arrow $\to$ Resize windows
+  \item Alt+j/k $\to$ Move text
+  \item Ctrl+c+Ctrl+c $\to$ Toggle conceal level
+  \item F10 $\to$ Change conceal level
+  \item F11 $\to$ Change concel Cursor
+  \item Space+i $\to$ Open Inkscape in tex files.
+\end{itemize}
+\end{document}
+
