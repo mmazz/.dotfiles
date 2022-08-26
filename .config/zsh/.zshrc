@@ -14,6 +14,7 @@ PS1="%B%{$fg[cyan]%}[%{$fg[white]%}%n%{$fg[cyan]%}@%{$fg[white]%}%M %{$fg[white]
 #ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
 #ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
+
 autoload -Uz up-line-or-beginning-search
 autoload -Uz down-line-or-beginning-search
 zle -N up-line-or-beginning-search
