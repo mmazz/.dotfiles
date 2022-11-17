@@ -1,4 +1,4 @@
-#files: 956	version: 5.9
+#files: 961	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -94,6 +94,8 @@ _comps=(
 'bindkey' '_bindkey'
 'bison' '_bison'
 'bitcoin-cli' '_bitcoin-cli'
+'black' '_black'
+'blackd' '_blackd'
 'bmake' '_make'
 'bogofilter' '_bogofilter'
 'bogotune' '_bogofilter'
@@ -192,6 +194,7 @@ _comps=(
 'cmp' '_cmp'
 'co' '_rcs'
 'code' '_code'
+'code-oss' '_code-oss'
 'coffee' '_coffee'
 'column' '_column'
 'comb' '_sccs'
@@ -820,6 +823,7 @@ _comps=(
 'mencal' '_mencal'
 'mere' '_mere'
 'merge' '_rcs'
+'meson' '_meson'
 'metaflac' '_flac'
 'mformat' '_mtools'
 'mgv' '_pspdf'
@@ -1819,23 +1823,24 @@ bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
 autoload -Uz _afew _android _archlinux-java _artisan _atach \
-            _bat _bitcoin-cli _bootctl _bower _bundle \
-            _busctl _caffeinate _cap _cask _ccache \
-            _cf _choc _chromium _cmake _coffee \
-            _composer _conan _concourse _console _coredumpctl \
-            _cppcheck _curl _dad _debuild _dget \
-            _dhcpcd _diana _docker _docpad _drush \
-            _ecdsautil _emulator _envdir _exportfs _fab \
-            _fail2ban-client _fd _ffind _fleetctl _flutter \
-            _force _fwupdmgr _gas _ghc _gist \
-            _git-flow _git-journal _git-pulls _git-revise _git-wtf \
-            _glances _golang _google _gpgconf _gtk-launch \
-            _hello _hledger _homestead _hostnamectl _httpie \
-            _ibus _include-what-you-use _inxi _jmeter _jmeter-plugins \
-            _jonas _journalctl _jrnl _jupyter _kak \
-            _kernel-install _kitchen _kitty _knife _language_codes \
-            _lf _libinput _lilypond _localectl _loginctl \
-            _lunchy _machinectl _mc _middleman _mina \
+            _bat _bitcoin-cli _black _blackd _bootctl \
+            _bower _bundle _busctl _caffeinate _cap \
+            _cask _ccache _cf _choc _chromium \
+            _cmake _code _code-oss _coffee _composer \
+            _conan _concourse _console _coredumpctl _cppcheck \
+            _curl _dad _debuild _dget _dhcpcd \
+            _diana _docker _docpad _drush _ecdsautil \
+            _emulator _envdir _exportfs _fab _fail2ban-client \
+            _fd _ffind _fleetctl _flutter _force \
+            _fwupdmgr _gas _ghc _gist _git-flow \
+            _git-journal _git-pulls _git-revise _git-wtf _glances \
+            _golang _google _gpgconf _gtk-launch _hello \
+            _hledger _homestead _hostnamectl _httpie _ibus \
+            _include-what-you-use _inxi _jmeter _jmeter-plugins _jonas \
+            _journalctl _jrnl _jupyter _kak _kernel-install \
+            _kitchen _kitty _knife _language_codes _lf \
+            _libinput _lilypond _localectl _loginctl _lunchy \
+            _machinectl _mc _meson _middleman _mina \
             _mix _mkinitcpio _mpv _mssh _mussh \
             _mvn _nano _nanoc _networkctl _nftables \
             _ninja _node _nvm _oomctl _openssl \

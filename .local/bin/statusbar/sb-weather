@@ -23,16 +23,16 @@ sed '13q;d' "$weatherReport" | grep -o "m\\([-+]\\)*[0-9]\\+" | sed 's/+//g' | \
 
 
 
-case $BUTTON in
-    1) "$TERMINAL" -e "less" "$weatherReport" ;;
-    3) getForecast && showWeather ;;
-	2) notify-send "🌈 Weather module" "\- Left click for actual forecast.
-- Right click to update forecast.
-☔: Chance of rain/snow
- : Daily low
- : Daily high" ;;
-	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
-esac
+#case $BUTTON in
+#    1) "$TERMINAL" -e "less" "$weatherReport" ;;
+#    3) getForecast && showWeather ;;
+#	2) notify-send "🌈 Weather module" "\- Left click for actual forecast.
+#- Right click to update forecast.
+#☔: Chance of rain/snow
+# : Daily low
+# : Daily high" ;;
+#	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+#esac
 
 # The test if our forcecast is updated to the day. If it isn't download a new
 # weather report from wttr.in with the above function.

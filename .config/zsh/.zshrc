@@ -4,7 +4,7 @@ autoload -U colors && colors	# Load colors
 #zstyle ':completion:*:*:git:*' script ~/usr/share/zsh/plugins/git-completion.bash
 #fpath=(~/usr/share/zsh/plugins $fpath)
 #autoload -Uz compinit && compinit
-PS1="%B%{$fg[cyan]%}[%{$fg[white]%}%n%{$fg[cyan]%}@%{$fg[white]%}%M %{$fg[white]%}%~%{$fg[cyan]%}]%{%}$%b "
+PS1="%B%{$fg[cyan]%}[%{$fg[cyan]%}%n%{$fg[white]%}@%{$fg[cyan]%}%M %{$fg[white]%}%~%{$fg[cyan]%}]%{%}$%b "
 
 #PROMPT="%B%{$fg[blue]%}[%{$fg[white]%}%n%{$fg[cyan]%}@%{$fg[white]%}%m%{$fg[blue]%}]%{$reset_color%}%
 #%(?:%{$fg_bold[cyan]%}➜ :%{$fg_bold[red]%}➜ )"
